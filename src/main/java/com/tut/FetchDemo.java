@@ -20,7 +20,7 @@ public class FetchDemo {
         Session session = factory.openSession();
 
         // Getting student from Database through session
-        Student student = session.get(Student.class, 2);
+        Student student = session.get(Student.class, 1);
         System.out.println(student);
 
         // Closing session and factory

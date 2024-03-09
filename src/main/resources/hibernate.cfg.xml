@@ -15,6 +15,10 @@
         <property name="hibernate.show_sql">true</property>
         <mapping class = "com.tut.entity.Student"/>
         <mapping class = "com.tut.entity.Address"/>
+        <mapping class = "com.map.Question"/>
+        <mapping class = "com.map.Answer"/>
+        <mapping class = "com.manyToMany.Project"/>
+        <mapping class = "com.manyToMany.Employee"/>
 
 
         <!-- Mapping files -->
