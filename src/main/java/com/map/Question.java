@@ -1,6 +1,7 @@
 package com.map;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 
@@ -17,7 +18,7 @@ public class Question {
 //    @JoinColumn(name = "answer")
 //    private Answer answer;
 
-    @OneToMany(mappedBy = "question")
+    @OneToMany(mappedBy = "question", fetch = FetchType.EAGER)
     private List<Answer> answers;
 
     public Question() {
@@ -55,16 +56,16 @@ public class Question {
         this.question = question;
     }
 
-    @Override
-    public String toString() {
-
-        String ret = "Question : " + getQuestion() + "\n" +
-                "ID : " + getId() + "\n";
-
-        for (Answer answer : getAnswers()) {
-            ret = ret + answer.getAnswer() + "\n";
-        }
-
-        return ret;
-    }
+//    @Override
+//    public String toString() {
+//
+//        String ret = "Question : " + getQuestion() + "\n" +
+//                "ID : " + getId() + "\n";
+//
+//        for (Answer answer : getAnswers()) {
+//            ret = ret + answer.getAnswer() + "\n";
+//        }
+//
+//        return ret;
+//    }
 }

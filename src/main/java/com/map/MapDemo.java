@@ -58,7 +58,9 @@ public class MapDemo {
 
         Question fetch = session.get(Question.class, 1212);
         System.out.println("Printing question");
-        System.out.println(fetch);
+        System.out.println(fetch.getId());
+        System.out.println(fetch.getQuestion());
+        System.out.println(fetch.getAnswers().size());
 
         session.close();
         factory.close();
