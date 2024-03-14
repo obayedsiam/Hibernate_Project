@@ -1,9 +1,6 @@
 package com.oneToMany;
 
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 import java.util.List;
 
@@ -14,11 +11,7 @@ public class Question {
     private int id;
     private String question;
 
-//    @OneToOne
-//    @JoinColumn(name = "answer")
-//    private Answer answer;
-
-    @OneToMany(mappedBy = "question", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "question", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Answer> answers;
 
     public Question() {
