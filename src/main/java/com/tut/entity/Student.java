@@ -1,9 +1,16 @@
 package com.tut.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import javax.persistence.Table;
+
 
 @Entity
 @Table(name = "STUDENT")
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class Student {
 
     @Id
@@ -26,7 +33,7 @@ public class Student {
         this.city = city;
     }
 
-    public Student(){
+    public Student() {
         super();
     }
 

@@ -1,6 +1,6 @@
-package com.map;
+package com.oneToMany;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 public class Answer {

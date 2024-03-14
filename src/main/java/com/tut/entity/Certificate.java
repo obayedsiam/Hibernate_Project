@@ -1,6 +1,6 @@
 package com.tut.entity;
 
-import jakarta.persistence.Embeddable;
+import javax.persistence.Embeddable;
 
 @Embeddable
 public class Certificate {

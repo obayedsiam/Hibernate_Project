@@ -1,4 +1,4 @@
-package com.map;
+package com.oneToMany;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
