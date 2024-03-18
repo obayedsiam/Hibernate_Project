@@ -8,7 +8,7 @@ import org.hibernate.cfg.Configuration;
 public class FirstLevelCachingDemo {
 
     /***
-     Here after creating the session object if the Student object is called then at th first place a query is fired
+     Here, after creating the session object if the Student object is called then at the first place a query is fired
      But in second time when the object is called the query is not fired, because it is in the session.
      If the session is closed then the session will not get the object.
 
@@ -43,5 +43,11 @@ public class FirstLevelCachingDemo {
         System.out.println(student3);
 
         session.close();
+
+        System.out.println("Here, after creating the session object if the Student object is called \n" +
+                "then at the first place a query is fired\n" +
+                "But in second time when the object is called the query is not fired, because it is in the session.\n" +
+                "If the session is closed then the session will not get the object.\n" +
+                "This is called first level caching");
     }
 }

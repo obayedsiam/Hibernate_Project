@@ -10,6 +10,12 @@ import org.hibernate.cfg.Configuration;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+If we use cascading then the lists variables inside an Object don't need to be explicitly inserted into database.
+ The list will automatically get inserted into the database
+ **/
+
+
 public class CascadingDemo {
 
     public static void main(String[] args) {
